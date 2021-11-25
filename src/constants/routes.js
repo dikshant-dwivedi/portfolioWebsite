@@ -1,0 +1,5 @@
+export const HOME = "/"
+export const BLOG = "/blog"
+export const EXPERIENCE = "/experience"
+export const PROJECT = "/project"
+export const CONTACT = "/contact"
