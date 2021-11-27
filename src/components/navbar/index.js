@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react"
-import SoundBar from "./../SoundBar"
+import SoundBar from "./SoundBar"
 import {
   Nav,
   NavLink,
   NavChangeThemeSwitch,
   NavChangeThemeSwitchHandle,
-  NavPlayButton,
   NavHamburder,
   NavMenu,
   NavMenuButtons,
@@ -16,11 +15,9 @@ import {
 import { CgMenu, CgClose } from "react-icons/cg"
 import ClickAwayListener from "react-click-away-listener"
 import { ROUTE_NAV } from "../../constants/routes"
-import { useTheme } from "../../hooks/useTheme"
 
 const Navbar = ({ toggleTheme, theme }) => {
   const [openMenu, setOpenMenu] = useState(false)
-  //const [theme, toggleTheme] = useTheme()
   const [isOn, setIsOn] = useState(false)
 
   useEffect(() => {

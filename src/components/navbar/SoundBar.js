@@ -2,12 +2,12 @@ import React, { useRef, useState } from "react"
 import styled, { keyframes } from "styled-components"
 import { motion } from "framer-motion"
 
-import music from "../assets/music.mp3"
+import music from "../../assets/music.mp3"
 
 const Box = styled(motion.div)`
   display: flex;
   cursor: pointer;
-  margin-top: 15px;
+  margin-top: 10px;
   z-index: 10;
   & > *:nth-child(1) {
     animation-delay: 0.2s;
@@ -42,7 +42,7 @@ const Line = styled.span`
   border: ${({ theme }) => "1px solid " + theme.txt};
   animation: ${play} 1s ease infinite;
   animation-play-state: ${(props) => (props.click ? "running" : "paused")};
-  height: 1rem;
+  height: 0.8rem;
   width: 2px;
   margin: 0 0.1rem;
 `
