@@ -103,6 +103,8 @@ export const NavMenuButtons = styled.div`
 `
 
 export const SideBar = styled.nav`
+  position: fixed;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -111,7 +113,6 @@ export const SideBar = styled.nav`
   height: 100vh;
   box-shadow: inset 0 0 0 1000px ${({ theme }) => theme.bgSideBar};
   background-size: cover;
-  position: absolute;
   padding: 0 5rem;
   top: 0;
   left: 0;

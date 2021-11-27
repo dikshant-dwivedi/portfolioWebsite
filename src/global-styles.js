@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     background: ${({ theme }) => theme.bgBody};
      transition: background-color 1s ease-in-out, color 1s ease-in-out; 
   }
+
 `
 
 export default GlobalStyle
