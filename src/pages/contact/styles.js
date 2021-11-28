@@ -19,12 +19,21 @@ export const Container = styled(motion.div)`
 `
 
 export const Section1 = styled.div`
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
+  width: 100%;
   background-image: ${({ theme }) => theme.contactFormBg};
   scroll-snap-align: start;
 
-  @media screen and (max-width: 780px) {
-    height: calc(2 * (100vh - 51px));
+  @media screen and (max-width: 954px) {
+    height: 150vh;
+  }
+
+  @media screen and (max-width: 650px) {
+    height: 135vh;
+  }
+
+  @media screen and (max-width: 590px) {
+    height: 180vh;
   }
 
   transition: background-image ease-in-out 0.3s;
@@ -59,27 +68,40 @@ export const BackgroundImage = styled.div`
   clip-path: polygon(0 0, 78% 0, 23% 100%, 0% 100%);
   background-color: #7eb5a6;
   transition: background-color ease-in-out 0.3s;
+
+  @media screen and (max-width: 954px) {
+    height: 150vh;
+  }
+
+  @media screen and (max-width: 650px) {
+    height: 135vh;
+    clip-path: none;
+  }
+
+  @media screen and (max-width: 590px) {
+    height: 180vh;
+    clip-path: none;
+  }
 `
 
 export const ContactSection = styled.div`
   position: absolute;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 1rem;
+  width: 100%;
+  padding: 2% 5%;
 `
 
 export const Title = styled.h1`
   color: ${({ theme }) => theme.txt};
   margin: 0;
+  text-align: center;
   font-size: 3rem;
 `
 
 export const SubTitle = styled.p`
   color: ${({ theme }) => theme.txt};
   text-align: center;
-  width: 90%;
+  width: 100%;
   font-size: 0.9rem;
   white-space: pre-wrap;
 `
@@ -87,8 +109,8 @@ export const SubTitle = styled.p`
 export const ContactFormBox = styled.div`
   border: 2px solid ${({ theme }) => theme.txt};
   display: flex;
-  width: 90%;
-  height: 70%;
+  flex-wrap: wrap;
+  width: 100%;
   box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 
@@ -98,18 +120,59 @@ export const ContactFormBox = styled.div`
 `
 export const ContactSectionLeft = styled.div`
   flex: 1;
-  padding: 2rem 1rem;
+  padding: 1rem;
 `
 export const ContactSectionMiddle = styled.div`
   flex: 1;
-  padding: 2rem 1rem;
+  padding: 1rem;
 `
 
 export const ContactSectionRight = styled.div`
   flex: 2;
+  padding: 1rem;
 `
+
+export const InfoContainer = styled.div`
+  width: 256px;
+  height: 200px;
+  margin: 50px auto;
+
+  @media screen and (max-width: 650px) {
+    margin: 25px auto;
+    margin-bottom: 0px;
+  }
+
+  @media screen and (max-width: 590px) {
+    position: relative;
+    left: 10%;
+  }
+`
+
+export const LinksContainer = styled.div`
+  width: 100%;
+  height: 270px;
+  width: 230px;
+  font-size: 3rem;
+  margin: 0 auto;
+
+  @media screen and (max-width: 650px) {
+    font-size: 1.8rem;
+    width: 180px;
+    height: 200px;
+  }
+
+  @media screen and (max-width: 590px) {
+    font-size: 3.2rem;
+    height: 270px;
+    width: 250px;
+    margin-top: -60px;
+  }
+`
+
 export const ContactForm = styled.form`
-  padding: 2rem 1rem;
+  width: 100%;
+  min-width: 230px;
+  height: 305px;
 `
 
 export const NameField = styled.input`
@@ -128,6 +191,10 @@ export const NameField = styled.input`
 
   ::placeholder {
     color: ${({ theme }) => theme.txt};
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
   }
 `
 
@@ -148,6 +215,10 @@ export const EmailField = styled.input`
   ::placeholder {
     color: ${({ theme }) => theme.txt};
   }
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
+  }
 `
 
 export const SubjectField = styled.input`
@@ -166,6 +237,10 @@ export const SubjectField = styled.input`
 
   ::placeholder {
     color: ${({ theme }) => theme.txt};
+  }
+
+  @media screen and (max-width: 1000px) {
+    width: 100%;
   }
 `
 
@@ -218,13 +293,6 @@ export const SubmitButton = styled(motion.div)`
   }
 `
 
-export const LinksContainer = styled.div`
-  width: 100%;
-  height: 80%;
-  min-width: 230px;
-  margin: 5% 0 10% 5%;
-`
-
 export const LinksColumn = styled.div`
   float: left;
   width: 50%;
@@ -241,7 +309,6 @@ export const LinksRow = styled.div`
   height: 50%;
 `
 export const AnimateIconLink = styled(motion.div)`
-  font-size: 3rem;
   cursor: pointer;
   display: inline-block;
   margin: 25% 25%;
@@ -257,17 +324,11 @@ export const LinksText = styled.p`
 
 export const LinksContactInfoRow = styled.div`
   width: 100%;
-  margin-left: 5%;
-  height: 25%;
-  :nth-of-type(3) {
-    height: 50%;
-  }
+  height: 33.3%;
 `
 export const AnimateIconInfo = styled(motion.div)`
   font-size: 1.3rem;
-  cursor: pointer;
   display: inline-block;
-  margin-top: 12%;
   text-align: center;
 `
 
@@ -278,11 +339,4 @@ export const ContactInfoText = styled.p`
   margin-left: 5px;
   position: relative;
   bottom: 5px;
-`
-
-export const InfoContainer = styled.div`
-  width: 100%;
-  min-width: 256px;
-  height: 80%;
-  margin: 15% 0 5% 5%;
 `

@@ -159,8 +159,8 @@ function Contact() {
           </ContactFormBox>
         </ContactSection>
       </Section1>
-      <Section2>sdadsadsadd</Section2>
-      <Section3>sddasdsadas</Section3>
+      {/*<Section2>sdadsadsadd</Section2>
+      <Section3>sddasdsadas</Section3>*/}
     </Container>
   )
 }

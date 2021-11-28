@@ -6,7 +6,7 @@ import sideBarImg from "./../../assets/images/sideBarImg.jpg"
 export const Nav = styled.nav`
   background-color: ${({ theme }) => theme.navBarbgBody};
   display: flex;
-  height: 35px;
+  height: 50px;
   justify-content: space-between;
   padding: 0.5rem 5vw;
   z-index: 15;
@@ -42,6 +42,7 @@ export const NavPlayButton = styled.button`
 `
 
 export const NavChangeThemeSwitch = styled.div`
+  box-sizing: content-box;
   width: 50px;
   height: 25px;
   background-color: ${({ theme }) => theme.swtch};
