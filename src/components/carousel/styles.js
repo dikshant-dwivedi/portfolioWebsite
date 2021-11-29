@@ -15,7 +15,7 @@ export const Container = styled.div`
 
   @media screen and (max-width: 650px) {
     flex-direction: column;
-    aspect-ratio: none;
+    aspect-ratio: 1.8/1;
   }
 `
 
