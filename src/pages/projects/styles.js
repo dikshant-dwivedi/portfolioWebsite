@@ -21,8 +21,14 @@ export const Section1 = styled.div`
   background-color: #a53860;
   scroll-snap-align: start;
 
+  padding: 2rem;
+
   @media screen and (max-width: 780px) {
     height: calc(2 * (100vh - 51px));
+  }
+
+  @media screen and (max-width: 650px) {
+    padding: 1rem;
   }
 `
 
