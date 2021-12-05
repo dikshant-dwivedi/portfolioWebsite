@@ -31,9 +31,7 @@ function Home() {
       <AnimatePresence exitBeforeEnter>
         {loading && <Loader key='loader' />}
       </AnimatePresence>
-      <Section1>
-        <LeftIntro></LeftIntro>
-      </Section1>
+      <Section1></Section1>
       <Section2>
         <ShapeDivider1>
           <svg
