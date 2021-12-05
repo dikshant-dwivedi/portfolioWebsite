@@ -8,6 +8,8 @@ export const lightTheme = {
   contactFormImgBg: "rgba(254, 255, 222, 0.4)",
   contactFormBg:
     "linear-gradient(to top left, #FEFFDE, #DDFFBC, #91C788, #52734D)",
+  loaderBg:
+    "linear-gradient(180deg, #ffe699, #ffde94, #ffd690, #ffce8d, #ffc68a, #ffbf89, #ffb789, #ffaf89, #ffa78b, #ffa08d, #ff998f, #ff9292)",
 }
 
 export const darkTheme = {
@@ -20,4 +22,6 @@ export const darkTheme = {
   contactFormImgBg: "rgba(66, 5, 22, 0.4)", //"rgba(243, 145, 137, 0.6)",
   contactFormBg:
     "linear-gradient(to bottom right, #420516 50%, #7D1935, #B42B51, #E63E6D)", //"#420516", //"#F39189",
+  loaderBg:
+    "linear-gradient(180deg, #1f005c, #320062, #430067, #52006c, #610170, #700475, #7f0879, #8d0e7c, #9c1580, #aa1b83, #b82385, #c62a88)",
 }

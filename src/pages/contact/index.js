@@ -1,10 +1,8 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import { pageVariants, pageTransition } from "../../config/pageTransitions"
 import {
   Container,
   Section1,
-  Section2,
-  Section3,
   BackgroundImage,
   ContactSectionLeft,
   ContactSectionRight,
@@ -31,6 +29,8 @@ import {
 } from "./styles"
 
 import { FaFilePdf, FaAddressCard } from "react-icons/fa"
+import { Loader } from "./../../components/loader/index"
+import { AnimatePresence } from "framer-motion"
 
 import {
   BsGithub,
@@ -42,6 +42,14 @@ import {
 import { GrMail } from "react-icons/gr"
 
 function Contact() {
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 1500)
+  }, [])
+
   return (
     <Container
       initial='initial'
@@ -50,15 +58,24 @@ function Contact() {
       variants={pageVariants}
       transition={pageTransition}
     >
+      <AnimatePresence exitBeforeEnter>
+        {loading && <Loader key='loader' />}
+      </AnimatePresence>
       <Section1>
         <BackgroundImage />
         <ContactSection>
           <Title>Get in Touch</Title>
-          <SubTitle>
+          {/*<SubTitle>
             Do you have any suggestions for me? Do you have any internship or
             job opportunities for me? Perhaps you have an awesome project idea
             to discuss, or you just want to say hello? Please send me a message
             and I will get back to you as soon as possible.
+          </SubTitle>*/}
+          <SubTitle>
+            Do you have any suggestions, an internship or a job opportunity for
+            me? Perhaps you have an awesome project idea to discuss, or you just
+            want to say hello? Please send me a message and I will get back to
+            you as soon as possible.
           </SubTitle>
           <ContactFormBox>
             <ContactSectionLeft>
@@ -159,8 +176,6 @@ function Contact() {
           </ContactFormBox>
         </ContactSection>
       </Section1>
-      {/*<Section2>sdadsadsadd</Section2>
-      <Section3>sddasdsadas</Section3>*/}
     </Container>
   )
 }

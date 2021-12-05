@@ -18,7 +18,7 @@ export const Container = styled(motion.div)`
   position: relative;
 `
 
-export const Section1 = styled.div`
+export const Section1 = styled(motion.div)`
   min-height: calc(100vh - 50px);
   width: 100%;
   background-image: ${({ theme }) => theme.contactFormBg};
@@ -340,3 +340,11 @@ export const ContactInfoText = styled.p`
   position: relative;
   bottom: 5px;
 `
+/*export const Loader = styled.div`
+  position: absolute;
+  background-color: ${({ theme }) => theme.loaderBg};
+  width: 100%;
+  height: 100%;
+  z-index: 12;
+  transition: background-color ease-in-out 0.3s;
+`*/

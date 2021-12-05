@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"
-import { motion, AnimateSharedLayout, AnimatePresence } from "framer-motion"
+import { AnimateSharedLayout, AnimatePresence } from "framer-motion"
 import {
   Container,
   PrimaryContainer,
@@ -7,75 +7,90 @@ import {
   PrimaryImageContainer,
   SecondaryImageContainer,
   Image,
+  TextContainerDesktop,
+  TextContainerMobile,
+  ProjectHeading,
+  ProjectDescription,
+  MobileContainer,
 } from "./styles.js"
+import { carouselData } from "./carouselData.js"
 
 const Carousel = () => {
-  const [productIds, setProductIds] = useState([
-    "37123c",
-    "71677c",
-    "dda77b",
-    "e55934",
-    "cdaca1",
-    "ccfbfe",
-    "1f0812",
-    "b98b82",
-  ])
-  const [primaryProduct, setPrimaryProduct] = useState("945d5e")
+  const [products, setProducts] = useState(carouselData.slice(1))
+  const [primaryProduct, setPrimaryProduct] = useState(carouselData[0])
 
   useEffect(() => {
     const interval = setInterval(() => {
-      const currentProductId = primaryProduct
-      const id = productIds[0]
-      const newProductIds = [
-        ...productIds.filter((x) => x !== id),
-        currentProductId,
+      const currentProduct = primaryProduct
+      const product = products[0]
+      const newProducts = [
+        ...products.filter((x) => x.id !== product.id),
+        currentProduct,
       ]
-      setPrimaryProduct(id)
-      setProductIds(newProductIds)
+      setPrimaryProduct(product)
+      setProducts(newProducts)
     }, 3000)
     return () => clearInterval(interval)
-  }, [primaryProduct, productIds])
+  }, [primaryProduct, products])
 
-  const setAsPrimary = (id) => {
-    const currentProductId = primaryProduct
-    const newProductIds = [
-      ...productIds.filter((x) => x !== id),
-      currentProductId,
+  const setAsPrimary = (product) => {
+    const currentProduct = primaryProduct
+    const newProducts = [
+      ...products.filter((x) => x.id !== product.id),
+      currentProduct,
     ]
-    setPrimaryProduct(id)
-    setProductIds(newProductIds)
+    setPrimaryProduct(product)
+    setProducts(newProducts)
   }
 
   return (
-    <Container>
-      <AnimateSharedLayout type='crossfade'>
-        <PrimaryContainer>
-          <AnimatePresence>
-            <PrimaryImageContainer
-              bgColor={primaryProduct}
-              key={primaryProduct}
-              layoutId={`product-${primaryProduct}`}
-            >
-              <Image />
-            </PrimaryImageContainer>
-          </AnimatePresence>
-        </PrimaryContainer>
-        <SecondaryContainer>
-          <AnimatePresence>
-            {productIds.map((id) => (
-              <SecondaryImageContainer
-                bgColor={id}
-                key={id}
-                onClick={() => setAsPrimary(id)}
-                layoutId={`product-${id}`}
+    <MobileContainer>
+      <Container>
+        <AnimateSharedLayout type='crossfade'>
+          <PrimaryContainer>
+            <AnimatePresence>
+              <PrimaryImageContainer
+                bgColor={primaryProduct.id}
+                key={primaryProduct.id}
+                layoutId={`product-${primaryProduct.id}`}
               >
-                <Image whileHover={{ scale: 1.2 }} whileTap={{ scale: 0.9 }} />
-              </SecondaryImageContainer>
-            ))}
-          </AnimatePresence>
-        </SecondaryContainer>
-      </AnimateSharedLayout>
-    </Container>
+                <Image />
+                <TextContainerDesktop>
+                  <ProjectHeading>{primaryProduct.title}</ProjectHeading>
+                  <ProjectDescription>
+                    {primaryProduct.description}
+                  </ProjectDescription>
+                </TextContainerDesktop>
+              </PrimaryImageContainer>
+            </AnimatePresence>
+          </PrimaryContainer>
+          <SecondaryContainer>
+            <AnimatePresence>
+              {products.map((product) => (
+                <SecondaryImageContainer
+                  bgColor={product.id}
+                  key={product.id}
+                  onClick={() => setAsPrimary(product)}
+                  layoutId={`product-${product.id}`}
+                >
+                  <Image whileTap={{ scale: 0.9 }} />
+                </SecondaryImageContainer>
+              ))}
+            </AnimatePresence>
+          </SecondaryContainer>
+        </AnimateSharedLayout>
+      </Container>
+      <TextContainerMobile>
+        <ProjectHeading>{primaryProduct.title}</ProjectHeading>
+        <ProjectDescription
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+        >
+          {primaryProduct.description}
+        </ProjectDescription>
+      </TextContainerMobile>
+    </MobileContainer>
   )
 }
 

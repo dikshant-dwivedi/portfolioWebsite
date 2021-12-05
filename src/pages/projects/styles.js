@@ -27,7 +27,7 @@ export const Section1 = styled.div`
     height: calc(2 * (100vh - 51px));
   }
 
-  @media screen and (max-width: 650px) {
+  @media (max-aspect-ratio: 7/5) {
     padding: 1rem;
   }
 `

@@ -1,6 +1,14 @@
 import styled from "styled-components/macro"
 import { motion } from "framer-motion"
 
+const ar = "7/5"
+
+export const MobileContainer = styled.div`
+  max-width: 100%;
+  height: 100%;
+  background-color: white;
+`
+
 export const Container = styled.div`
   background-color: white;
 
@@ -13,7 +21,7 @@ export const Container = styled.div`
 
   overflow: hidden;
 
-  @media screen and (max-width: 650px) {
+  @media (max-aspect-ratio: ${ar}) {
     flex-direction: column;
     aspect-ratio: 1.8/1;
   }
@@ -25,10 +33,10 @@ export const PrimaryContainer = styled.div`
 
   position: relative;
 
-  @media screen and (max-width: 650px) {
+  @media (max-aspect-ratio: ${ar}) {
     height: none;
     width: 100%;
-  }
+  } ;
 `
 
 export const SecondaryContainer = styled.div`
@@ -46,7 +54,7 @@ export const SecondaryContainer = styled.div`
     display: none;
   }
 
-  @media screen and (max-width: 650px) {
+  @media (max-aspect-ratio: ${ar}) {
     height: none;
     width: 100%;
     flex-direction: row;
@@ -61,10 +69,42 @@ export const PrimaryImageContainer = styled(motion.div)`
 
   position: absolute;
 
-  //padding: 2rem;
-
   top: 0;
   left: 0;
+`
+
+export const TextContainerDesktop = styled.div`
+  width: 100%;
+  min-height: 100px;
+  background-color: blue;
+  position: absolute;
+
+  bottom: 0;
+  left: 0;
+
+  @media (max-aspect-ratio: ${ar}) {
+    display: none;
+  }
+`
+export const TextContainerMobile = styled.div`
+  width: 100%;
+  min-height: 75px;
+  background-color: blue;
+  display: none;
+
+  @media (max-aspect-ratio: ${ar}) {
+    display: block;
+  }
+`
+
+export const ProjectHeading = styled(motion.h2)`
+  margin: 0;
+  color: white;
+`
+
+export const ProjectDescription = styled(motion.p)`
+  margin: 0;
+  color: white;
 `
 
 export const SecondaryImageContainer = styled(motion.div)`
@@ -76,9 +116,7 @@ export const SecondaryImageContainer = styled(motion.div)`
   background-color: ${({ bgColor }) => "#" + bgColor};
   cursor: pointer;
 
-  //padding: 2rem;
-
-  @media screen and (max-width: 650px) {
+  @media (max-aspect-ratio: ${ar}) {
     height: 100%;
     min-width: 25%;
     width: none;
