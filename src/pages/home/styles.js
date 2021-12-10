@@ -10,7 +10,7 @@ export const Container = styled(motion.div)`
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
-
+  scroll-behavior: smooth;
   ::-webkit-scrollbar {
     display: none;
   }
@@ -25,6 +25,76 @@ export const Section1 = styled.div`
 
   @media screen and (max-width: 780px) {
     height: calc(2 * (100vh - 51px));
+  }
+
+  display: flex;
+`
+
+export const LeftContainer = styled.div`
+  flex: 1;
+`
+
+export const RightContainer = styled.div`
+  flex: 1;
+`
+
+export const HeadingWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  font-weight: 500;
+  color: ${({ theme }) => theme.txt};
+  padding-left: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+`
+export const HeadingMain = styled.h1`
+  font-size: 50px;
+  margin 10px 0px;
+`
+export const HeadingSecondary = styled.h2`
+  font-size: 35px;
+  margin: 0px;
+`
+export const HeadingTertiary = styled.h3`
+  font-size: 30px;
+  margin: 0px;
+
+  span {
+    color: yellow;
+  }
+
+  .ityped-cursor {
+    animation: blink 1s infinite;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+`
+export const DownArrow = styled.div`
+  font-size: 6rem;
+  text-align: center;
+  position: absolute;
+  bottom: 5px;
+  color: ${({ theme }) => theme.txt};
+  left: calc(50% - 3rem);
+  animation: arrowBlink 2s infinite;
+
+  @keyframes arrowBlink {
+    100% {
+      opacity: 0;
+    }
+  }
+
+  a {
+    color: ${({ theme }) => theme.txt};
   }
 `
 

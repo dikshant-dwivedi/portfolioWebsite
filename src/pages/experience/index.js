@@ -2,7 +2,8 @@ import React, { useEffect, useState } from "react"
 import { Loader } from "./../../components/loader/index"
 import { AnimatePresence } from "framer-motion"
 import { pageVariants, pageTransition } from "../../config/pageTransitions"
-import { Container, Section1, Section2, Section3 } from "./styles"
+import { Container, Section1 } from "./styles"
+import Timeline from "../../components/timeline/index"
 
 function Experience() {
   const [loading, setLoading] = useState(true)
@@ -24,9 +25,9 @@ function Experience() {
       <AnimatePresence exitBeforeEnter>
         {loading && <Loader key='loader' />}
       </AnimatePresence>
-      <Section1>dfsdffsdf</Section1>
-      <Section2>sdadsadsadd</Section2>
-      <Section3>sddasdsadas</Section3>
+      <Section1>
+        <Timeline /*offsetY={offsetY}*/ />
+      </Section1>
     </Container>
   )
 }

@@ -13,17 +13,14 @@ export const Container = styled(motion.div)`
   ::-webkit-scrollbar {
     display: none;
   }
-  scroll-snap-type: y mandatory;
+  //scroll-snap-type: y mandatory;
 `
 
 export const Section1 = styled.div`
-  height: calc(100vh - 50px);
+  min-height: calc(100vh - 50px);
+  padding: 20px;
   background-color: #a53860;
-  scroll-snap-align: start;
-
-  @media screen and (max-width: 780px) {
-    height: calc(2 * (100vh - 51px));
-  }
+  //scroll-snap-align: start;
 `
 
 export const Section2 = styled.div`

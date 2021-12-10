@@ -10,6 +10,10 @@ export const lightTheme = {
     "linear-gradient(to top left, #FEFFDE, #DDFFBC, #91C788, #52734D)",
   loaderBg:
     "linear-gradient(180deg, #ffe699, #ffde94, #ffd690, #ffce8d, #ffc68a, #ffbf89, #ffb789, #ffaf89, #ffa78b, #ffa08d, #ff998f, #ff9292)",
+  timelineItemBg: "#FFCE45",
+  timelineItemTxt: "#362222",
+  timelineTagEd: "#83142C",
+  timelineTagWk: "#115173",
 }
 
 export const darkTheme = {
@@ -24,4 +28,8 @@ export const darkTheme = {
     "linear-gradient(to bottom right, #420516 50%, #7D1935, #B42B51, #E63E6D)", //"#420516", //"#F39189",
   loaderBg:
     "linear-gradient(180deg, #1f005c, #320062, #430067, #52006c, #610170, #700475, #7f0879, #8d0e7c, #9c1580, #aa1b83, #b82385, #c62a88)",
+  timelineItemBg: "#064635", //"#7E370C",,
+  timelineItemTxt: "#F9D5A7", //"#EAE7C6",
+  timelineTagEd: "#F39422",
+  timelineTagWk: "#ED6663",
 }
