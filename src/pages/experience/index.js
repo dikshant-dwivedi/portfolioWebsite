@@ -23,11 +23,14 @@ function Experience() {
       transition={pageTransition}
     >
       <AnimatePresence exitBeforeEnter>
-        {loading && <Loader key='loader' />}
+        {loading ? (
+          <Loader key='loader' />
+        ) : (
+          <Section1>
+            <Timeline />
+          </Section1>
+        )}
       </AnimatePresence>
-      <Section1>
-        <Timeline /*offsetY={offsetY}*/ />
-      </Section1>
     </Container>
   )
 }
