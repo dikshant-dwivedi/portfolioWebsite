@@ -1,7 +1,6 @@
 import styled from "styled-components"
 import { NavLink as Link } from "react-router-dom"
 import { motion } from "framer-motion"
-import sideBarImg from "./../../assets/images/sideBarImg.jpg"
 
 export const Nav = styled.nav`
   background-color: ${({ theme }) => theme.navBarbgBody};
@@ -109,7 +108,7 @@ export const SideBar = styled.nav`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url(${sideBarImg});
+  background-image: url("/assets/images/sideBarImg.jpg");
   background-color: ${({ theme }) => theme.bgSideBar};
   height: 100vh;
   box-shadow: inset 0 0 0 1000px ${({ theme }) => theme.bgSideBar};

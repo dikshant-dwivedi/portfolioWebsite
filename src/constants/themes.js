@@ -14,6 +14,7 @@ export const lightTheme = {
   timelineItemTxt: "#362222",
   timelineTagEd: "#83142C",
   timelineTagWk: "#115173",
+  carouselSecondaryContainerBg: "rgba(250, 241, 230, 1)",
 }
 
 export const darkTheme = {
@@ -32,4 +33,5 @@ export const darkTheme = {
   timelineItemTxt: "#F9D5A7", //"#EAE7C6",
   timelineTagEd: "#F39422",
   timelineTagWk: "#ED6663",
+  carouselSecondaryContainerBg: "rgba(15, 4, 76, 1)",
 }

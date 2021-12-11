@@ -29,7 +29,7 @@ const Carousel = () => {
       ]
       setPrimaryProduct(product)
       setProducts(newProducts)
-    }, 3000)
+    }, 5000)
     return () => clearInterval(interval)
   }, [primaryProduct, products])
 
@@ -54,7 +54,11 @@ const Carousel = () => {
                 key={primaryProduct.id}
                 layoutId={`product-${primaryProduct.id}`}
               >
-                <Image />
+                <Image
+                  src={primaryProduct.imageUrl}
+                  alt={primaryProduct.title}
+                  showShadow={true}
+                />
                 <TextContainerDesktop>
                   <ProjectHeading>{primaryProduct.title}</ProjectHeading>
                   <ProjectDescription>
@@ -72,8 +76,14 @@ const Carousel = () => {
                   key={product.id}
                   onClick={() => setAsPrimary(product)}
                   layoutId={`product-${product.id}`}
+                  content={product.title}
+                  whileTap={{ scale: 0.9 }}
                 >
-                  <Image whileTap={{ scale: 0.9 }} />
+                  <Image
+                    src={product.imageUrl}
+                    alt={product.title}
+                    showShadow={false}
+                  />
                 </SecondaryImageContainer>
               ))}
             </AnimatePresence>

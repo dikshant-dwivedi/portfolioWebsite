@@ -2,8 +2,6 @@ import React, { useRef, useState } from "react"
 import styled, { keyframes } from "styled-components"
 import { motion } from "framer-motion"
 
-import music from "../../assets/music.mp3"
-
 const Box = styled(motion.div)`
   display: flex;
   cursor: pointer;
@@ -72,7 +70,7 @@ const SoundBar = () => {
       <Line click={click} />
       <Line click={click} />
 
-      <audio src={music} ref={ref} loop />
+      <audio src='/assets/music.mp3' ref={ref} loop />
     </Box>
   )
 }

@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
-import contactFormBg from "./../../assets/images/contactFormBg.jpg"
 
 export const Container = styled(motion.div)`
   width: 95%;
@@ -62,7 +61,7 @@ export const BackgroundImage = styled.div`
   position: absolute;
   height: calc(100vh - 50px);
   width: 100%;
-  background-image: url(${contactFormBg});
+  background-image: url("/assets/images/contactFormBg.jpg");
   box-shadow: inset 0 0 0 1000px ${({ theme }) => theme.contactFormImgBg};
   background-size: cover;
   clip-path: polygon(0 0, 78% 0, 23% 100%, 0% 100%);
