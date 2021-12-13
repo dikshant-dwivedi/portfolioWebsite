@@ -43,11 +43,15 @@ import { GrMail } from "react-icons/gr"
 
 function Contact() {
   const [loading, setLoading] = useState(true)
+  const [startRendering, setStartRendering] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false)
-    }, 1500)
+      setTimeout(() => {
+        setLoading(false)
+      }, 2500)
+      setStartRendering(true)
+    }, 1000)
   }, [])
 
   return (
@@ -59,9 +63,10 @@ function Contact() {
       transition={pageTransition}
     >
       <AnimatePresence exitBeforeEnter>
-        {loading ? (
-          <Loader key='loader' />
-        ) : (
+        {loading && <Loader key='loader' />}
+      </AnimatePresence>
+      {startRendering && (
+        <>
           <Section1>
             <BackgroundImage />
             <ContactSection>
@@ -185,8 +190,8 @@ function Contact() {
               </ContactFormBox>
             </ContactSection>
           </Section1>
-        )}
-      </AnimatePresence>
+        </>
+      )}
     </Container>
   )
 }

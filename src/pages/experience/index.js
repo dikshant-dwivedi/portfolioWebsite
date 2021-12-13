@@ -8,11 +8,15 @@ import ImageSlider from "../../components/imageSlider/index"
 
 function Experience() {
   const [loading, setLoading] = useState(true)
+  const [startRendering, setStartRendering] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false)
-    }, 1500)
+      setTimeout(() => {
+        setLoading(false)
+      }, 2500)
+      setStartRendering(true)
+    }, 1000)
   }, [])
 
   return (
@@ -24,7 +28,19 @@ function Experience() {
       transition={pageTransition}
     >
       <AnimatePresence exitBeforeEnter>
-        {loading ? (
+        {loading && <Loader key='loader' />}
+      </AnimatePresence>
+      {startRendering && (
+        <>
+          <Section1>
+            <Timeline />
+          </Section1>
+          <Section2>
+            <ImageSlider />
+          </Section2>
+        </>
+      )}
+      {/*loading ? (
           <Loader key='loader' />
         ) : (
           <>
@@ -35,8 +51,7 @@ function Experience() {
               <ImageSlider />
             </Section2>
           </>
-        )}
-      </AnimatePresence>
+        )*/}
     </Container>
   )
 }

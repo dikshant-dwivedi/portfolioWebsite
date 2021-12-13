@@ -6,11 +6,15 @@ import { Container, Section1, Section2, Section3 } from "./styles"
 
 function Blog() {
   const [loading, setLoading] = useState(true)
+  const [startRendering, setStartRendering] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false)
-    }, 1500)
+      setTimeout(() => {
+        setLoading(false)
+      }, 2500)
+      setStartRendering(true)
+    }, 1000)
   }, [])
 
   return (
@@ -24,9 +28,13 @@ function Blog() {
       <AnimatePresence exitBeforeEnter>
         {loading && <Loader key='loader' />}
       </AnimatePresence>
-      <Section1>dfsdffsdf</Section1>
-      <Section2>sdadsadsadd</Section2>
-      <Section3>sddasdsadas</Section3>
+      {startRendering && (
+        <>
+          <Section1>dfsdffsdf</Section1>
+          <Section2>sdadsadsadd</Section2>
+          <Section3>sddasdsadas</Section3>
+        </>
+      )}
     </Container>
   )
 }

@@ -7,11 +7,15 @@ import Carousel from "../../components/carousel/index"
 
 function Project() {
   const [loading, setLoading] = useState(true)
+  const [startRendering, setStartRendering] = useState(false)
 
   useEffect(() => {
     setTimeout(() => {
-      setLoading(false)
-    }, 1500)
+      setTimeout(() => {
+        setLoading(false)
+      }, 2500)
+      setStartRendering(true)
+    }, 1000)
   }, [])
 
   return (
@@ -25,11 +29,15 @@ function Project() {
       <AnimatePresence exitBeforeEnter>
         {loading && <Loader key='loader' />}
       </AnimatePresence>
-      <Section1>
-        <Carousel />
-      </Section1>
-      <Section2>sdadsadsadd</Section2>
-      <Section3>sddasdsadas</Section3>
+      {startRendering && (
+        <>
+          <Section1>
+            <Carousel />
+          </Section1>
+          <Section2>sdadsadsadd</Section2>
+          <Section3>sddasdsadas</Section3>
+        </>
+      )}
     </Container>
   )
 }
