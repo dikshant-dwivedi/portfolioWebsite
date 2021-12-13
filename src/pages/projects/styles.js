@@ -18,7 +18,8 @@ export const Container = styled(motion.div)`
 
 export const Section1 = styled.div`
   height: calc(100vh - 50px);
-  background-color: #a53860;
+  //background-color: #a53860;
+  background-image: ${({ theme }) => theme.contactFormBg};
   //background-image: url("/assets/svgs/pattern.svg");
   scroll-snap-align: start;
 

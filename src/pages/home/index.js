@@ -67,7 +67,8 @@ function Home() {
           </HeadingWrapper>
         </RightContainer>
       </Section1>
-      <Section2 id='section2'>
+      <Section1 id='section2'></Section1>
+      <Section2 id='section3'>
         <ShapeDivider1>
           <svg
             data-name='Layer 1'
@@ -81,7 +82,7 @@ function Home() {
             ></path>
           </svg>
         </ShapeDivider1>
-        <ShapeDivider2 id='section3'>
+        <ShapeDivider2 id='section4'>
           <svg
             data-name='Layer 1'
             xmlns='http://www.w3.org/2000/svg'

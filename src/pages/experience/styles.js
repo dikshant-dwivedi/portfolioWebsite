@@ -24,13 +24,15 @@ export const Section1 = styled.div`
 `
 
 export const Section2 = styled.div`
-  height: 100vh;
   background-color: #61c9a8;
   scroll-snap-align: start;
+  padding: 40px 0;
+  background-image: url("/assets/images/imageSliderBg.jpg");
+  box-shadow: inset 0 0 0 1000px ${({ theme }) => theme.contactFormImgBg};
 
-  @media screen and (max-width: 780px) {
-    height: calc(2 * (100vh - 51px));
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `
 
 export const Section3 = styled.div`

@@ -9,6 +9,11 @@ export const MobileContainer = styled.div`
   height: auto;
   box-shadow: inset 0 0 0 1000px ${({ theme }) => theme.contactFormImgBg};
   padding: ;
+
+  @media (max-aspect-ratio: ${ar}) {
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+  }
 `
 
 export const Container = styled.div`
@@ -92,6 +97,8 @@ export const TextContainerMobile = styled.div`
   display: none;
   border: 2px solid ${({ theme }) => theme.txt};
   border-top: none;
+  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 20px;
 
   @media (max-aspect-ratio: ${ar}) {
     display: block;

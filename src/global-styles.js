@@ -18,6 +18,17 @@ const GlobalStyle = createGlobalStyle`
     display: none;
   }
 
+  /*.slide {
+    opacity: 0;
+    transition-duration: .5s ease;
+  }
+
+  .active {
+    opacity: 1;
+    transition-duration: .5s;
+    transform: scale(1.08);
+  }*/
+
 `
 
 export default GlobalStyle
