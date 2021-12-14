@@ -5,15 +5,15 @@ import {
   NavLink,
   NavChangeThemeSwitch,
   NavChangeThemeSwitchHandle,
-  NavHamburder,
+  NavHamburger,
+  NavHamburgerContainer,
   NavMenu,
   NavMenuButtons,
   SideBar,
   NavLinkSideBar,
   SideBarNavContainer,
+  Overlay,
 } from "./styles"
-import { CgMenu, CgClose } from "react-icons/cg"
-import ClickAwayListener from "react-click-away-listener"
 import { ROUTE_NAV } from "../../constants/routes"
 
 const Navbar = ({ toggleTheme, theme }) => {
@@ -30,6 +30,12 @@ const Navbar = ({ toggleTheme, theme }) => {
 
   return (
     <>
+      <Overlay
+        openMenu={openMenu}
+        onClick={() => {
+          setOpenMenu(false)
+        }}
+      />
       <Nav>
         <NavMenu>
           {ROUTE_NAV.map(({ link_name, path }) => (
@@ -39,9 +45,15 @@ const Navbar = ({ toggleTheme, theme }) => {
           ))}
         </NavMenu>
         <NavMenuButtons>
-          <NavHamburder onClick={() => setOpenMenu((prev) => !prev)}>
-            {openMenu ? <CgClose /> : <CgMenu />}
-          </NavHamburder>
+          <NavHamburgerContainer
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            onClick={() => {
+              setOpenMenu((prev) => !prev)
+            }}
+          >
+            <NavHamburger openMenu={openMenu}></NavHamburger>
+          </NavHamburgerContainer>
           {/*<NavPlayButton>ddfsf</NavPlayButton>*/}
           <SoundBar />
           <NavChangeThemeSwitch
@@ -59,21 +71,19 @@ const Navbar = ({ toggleTheme, theme }) => {
           </NavChangeThemeSwitch>
         </NavMenuButtons>
       </Nav>
-      <ClickAwayListener onClickAway={() => setOpenMenu(false)}>
-        <SideBar openMenu={openMenu}>
-          <SideBarNavContainer>
-            {ROUTE_NAV.map(({ link_name, path }) => (
-              <NavLinkSideBar
-                to={path}
-                key={link_name + path}
-                onClick={() => setOpenMenu(false)}
-              >
-                {link_name}
-              </NavLinkSideBar>
-            ))}
-          </SideBarNavContainer>
-        </SideBar>
-      </ClickAwayListener>
+      <SideBar openMenu={openMenu}>
+        <SideBarNavContainer>
+          {ROUTE_NAV.map(({ link_name, path }) => (
+            <NavLinkSideBar
+              to={path}
+              key={link_name + path}
+              onClick={() => setOpenMenu(false)}
+            >
+              {link_name}
+            </NavLinkSideBar>
+          ))}
+        </SideBarNavContainer>
+      </SideBar>
     </>
   )
 }

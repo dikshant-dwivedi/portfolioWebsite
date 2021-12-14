@@ -1,10 +1,4 @@
 import styled from "styled-components/macro"
-import {
-  BiRightArrow,
-  BiLeftArrow,
-  /*FaArrowAltCircleRight,
-  FaArrowAltCircleLeft,*/
-} from "react-icons/bi"
 import { motion } from "framer-motion"
 import Tilt from "react-parallax-tilt"
 
