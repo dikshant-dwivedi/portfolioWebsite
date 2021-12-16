@@ -30,6 +30,11 @@ function Blog() {
       </AnimatePresence>
       {startRendering && (
         <>
+          {/*<Parallax bgImage='/assets/images/contactFormBg.jpg' strength={500}>
+            <div style={{ height: 540 }}>
+              <div style={inlineStyle}>HTML inside the parallax</div>
+            </div>
+          </Parallax>*/}
           <Section1>dfsdffsdf</Section1>
           <Section2>sdadsadsadd</Section2>
           <Section3>sddasdsadas</Section3>

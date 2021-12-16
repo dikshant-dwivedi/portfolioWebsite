@@ -5,8 +5,8 @@ import layerSvg from "./layer1.svg"
 export const Container = styled(motion.div)`
   width: 95%;
   margin: auto;
-  //background-color: #ffeedb;
-  height: calc(100vh - 51px);
+  background-color: #ffeedb;
+  height: calc(100vh - 50px);
   overflow: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -15,13 +15,16 @@ export const Container = styled(motion.div)`
     display: none;
   }
   scroll-snap-type: y mandatory;
+
+  @media screen and (max-width: 1080px) {
+    scroll-snap-type: unset;
+  }
 `
 
 export const Section1 = styled.div`
   height: calc(100vh - 50px);
   background-color: #a53860;
   scroll-snap-align: start;
-  position: relative;
 
   @media screen and (max-width: 780px) {
     height: calc(2 * (100vh - 51px));
@@ -99,21 +102,31 @@ export const DownArrow = styled.div`
 `
 
 export const Section2 = styled.div`
-  height: 100vh;
-  //background-color: #61c9a8;
-  //background-color: transparent;
+  height: calc(100vh - 50px);
+  background-image: url("/assets/images/cloudBg.jpg");
+  box-shadow: inset 0 0 0 1000px ${({ theme }) => theme.skillsSectionImageBg};
+  background-attachment: fixed;
+  background-size: cover;
   scroll-snap-align: start;
-  position: relative;
 
-  /*@media screen and (max-width: 780px) {
-    height: calc(2 * (100vh - 51px));
-  }*/
+  @media screen and (max-width: 1080px) {
+    height: calc(100vh - 50px + 250px);
+  }
+
+  @media screen and (max-width: 700px) {
+    height: calc(100vh - 50px + 4 * 100px);
+  }
+
+  @media screen and (max-width: 530px) {
+    height: calc(100vh - 50px + 4 * 240px);
+  }
 `
 
 export const Section3 = styled.div`
   height: 100vh;
   background-color: #4c3b4d;
   scroll-snap-align: start;
+  position: relative;
 
   @media screen and (max-width: 780px) {
     height: calc(2 * (100vh - 51px));

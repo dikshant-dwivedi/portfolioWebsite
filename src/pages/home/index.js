@@ -19,6 +19,7 @@ import {
   HeadingTertiary,
   DownArrow,
 } from "./styles"
+import SkillsContainer from "../../containers/skillsContainer"
 
 function Home() {
   const textRef = useRef()
@@ -39,8 +40,6 @@ function Home() {
       })
     }, 1000)
   }, [])
-
-  useEffect(() => {}, [])
 
   return (
     <Container
@@ -72,8 +71,10 @@ function Home() {
               </HeadingWrapper>
             </RightContainer>
           </Section1>
-          <Section1 id='section2'></Section1>
-          <Section2 id='section3'>
+          <Section2 id='section2'>
+            <SkillsContainer />
+          </Section2>
+          <Section3 id='section3'>
             <ShapeDivider1>
               <svg
                 data-name='Layer 1'
@@ -87,7 +88,7 @@ function Home() {
                 ></path>
               </svg>
             </ShapeDivider1>
-            <ShapeDivider2 id='section4'>
+            <ShapeDivider2>
               <svg
                 data-name='Layer 1'
                 xmlns='http://www.w3.org/2000/svg'
@@ -101,8 +102,7 @@ function Home() {
               </svg>
               sssss
             </ShapeDivider2>
-          </Section2>
-          <Section3></Section3>
+          </Section3>
         </>
       )}
     </Container>
