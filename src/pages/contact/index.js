@@ -26,11 +26,13 @@ import {
   LinksText,
   LinksContactInfoRow,
   ContactInfoText,
+  Result,
 } from "./styles"
 
 import { FaFilePdf, FaAddressCard } from "react-icons/fa"
 import { Loader } from "./../../components/loader/index"
 import { AnimatePresence } from "framer-motion"
+import emailjs from "@emailjs/browser"
 
 import {
   BsGithub,
@@ -44,6 +46,13 @@ import { GrMail } from "react-icons/gr"
 function Contact() {
   const [loading, setLoading] = useState(true)
   const [startRendering, setStartRendering] = useState(false)
+  const [name, setName] = useState("")
+  const [email, setEmail] = useState("")
+  const [subject, setSubject] = useState("")
+  const [message, setMessage] = useState("")
+  const colorError = "#ff3333"
+  const colorSuccess = "#42ba96"
+  const [res, setRes] = useState({ text: "", type: colorError })
 
   useEffect(() => {
     setTimeout(() => {
@@ -53,6 +62,52 @@ function Contact() {
       setStartRendering(true)
     }, 1000)
   }, [])
+
+  const isEmailValid = (email) => {
+    return String(email)
+      .toLowerCase()
+      .match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      )
+  }
+
+  const sendEmail = () => {
+    emailjs
+      .sendForm(
+        process.env.REACT_APP_SERVICE_ID,
+        process.env.REACT_APP_TEMPLATE_ID,
+        "#contact-form",
+        process.env.REACT_APP_USER_ID
+      )
+      .then(
+        (result) => {
+          setRes({
+            text: "Thanks! I will connect with you shortly.",
+            type: colorSuccess,
+          })
+        },
+        (error) => {
+          setRes({
+            text: error.text,
+            type: colorSuccess,
+          })
+        }
+      )
+  }
+
+  const submitHandler = (e) => {
+    e.preventDefault()
+    if (!name || !email || !subject || !message) {
+      setRes({ text: "Please fill all the fields.", type: colorError })
+      return
+    }
+    if (!isEmailValid(email)) {
+      setRes({ text: "Please fill a valid email.", type: colorError })
+      return
+    }
+    setRes({ text: "", type: colorError })
+    sendEmail()
+  }
 
   return (
     <Container
@@ -162,29 +217,43 @@ function Contact() {
                   </LinksContainer>
                 </ContactSectionMiddle>
                 <ContactSectionRight>
-                  <ContactForm>
+                  <ContactForm id='contact-form' onSubmit={submitHandler}>
                     <NameField
                       type='text'
                       placeholder='Name'
-                      name='user_name'
+                      name='name'
+                      value={name}
+                      onChange={(e) => setName(e.target.value)}
                     />
                     <EmailField
                       type='text'
                       placeholder='Email'
-                      name='user_email'
+                      name='email'
+                      value={email}
+                      onChange={(e) => setEmail(e.target.value)}
                     />
                     <SubjectField
                       type='text'
                       placeholder='Subject'
-                      name='user_subject'
+                      name='subject'
+                      value={subject}
+                      onChange={(e) => setSubject(e.target.value)}
                     />
-                    <MessageField rows='8' placeholder='Message' />
+                    <MessageField
+                      rows='8'
+                      placeholder='Message'
+                      name='message'
+                      value={message}
+                      onChange={(e) => setMessage(e.target.value)}
+                    />
                     <SubmitButton
                       whileTap={{ scale: 0.9 }}
                       whileHover={{ scale: 1.1 }}
+                      type='submit'
                     >
                       Submit
                     </SubmitButton>
+                    <Result textColor={res.type}>{res.text}</Result>
                   </ContactForm>
                 </ContactSectionRight>
               </ContactFormBox>

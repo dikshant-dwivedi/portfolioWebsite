@@ -172,6 +172,7 @@ export const ContactForm = styled.form`
   width: 100%;
   min-width: 230px;
   height: 305px;
+  position: relative;
 `
 
 export const NameField = styled.input`
@@ -275,7 +276,15 @@ export const MessageField = styled.textarea`
   }
 `
 
-export const SubmitButton = styled(motion.div)`
+export const SubmitButton = styled(motion.button)`
+  background: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+
   font-size: 0.8rem;
   font-weight: 600;
   width: 80px;
@@ -347,3 +356,11 @@ export const ContactInfoText = styled.p`
   z-index: 12;
   transition: background-color ease-in-out 0.3s;
 `*/
+export const Result = styled.span`
+  position: absolute;
+  bottom: 5px;
+  left: 90px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: ${({ textColor }) => textColor};
+`

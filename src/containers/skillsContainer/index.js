@@ -37,9 +37,15 @@ const SkillsContainer = () => {
           perspective={1000}
           transitionSpeed={2000}
           gyroscope={false}
-          style={{ padding: "5px" }}
           glareEnable={true}
           glareMaxOpacity={1}
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            justifyContent: "center",
+            padding: "5px",
+          }}
         >
           <Heading>
             An excellent skillset developed through{" "}

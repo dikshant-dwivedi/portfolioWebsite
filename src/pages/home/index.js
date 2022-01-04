@@ -9,6 +9,7 @@ import {
   Section1,
   Section2,
   Section3,
+  Section4,
   ShapeDivider1,
   ShapeDivider2,
   LeftContainer,
@@ -20,6 +21,7 @@ import {
   DownArrow,
 } from "./styles"
 import SkillsContainer from "../../containers/skillsContainer"
+import AccordionContainer from "../../containers/accordionContainer"
 
 function Home() {
   const textRef = useRef()
@@ -75,6 +77,9 @@ function Home() {
             <SkillsContainer />
           </Section2>
           <Section3 id='section3'>
+            <AccordionContainer />
+          </Section3>
+          <Section4 id='section4'>
             <ShapeDivider1>
               <svg
                 data-name='Layer 1'
@@ -102,7 +107,7 @@ function Home() {
               </svg>
               sssss
             </ShapeDivider2>
-          </Section3>
+          </Section4>
         </>
       )}
     </Container>

@@ -5,7 +5,7 @@ import layerSvg from "./layer1.svg"
 export const Container = styled(motion.div)`
   width: 95%;
   margin: auto;
-  background-color: #ffeedb;
+  background-color: ${({ theme }) => theme.containerBg}; //
   height: calc(100vh - 50px);
   overflow: scroll;
   -ms-overflow-style: none;
@@ -123,6 +123,20 @@ export const Section2 = styled.div`
 `
 
 export const Section3 = styled.div`
+  height: calc(100vh - 50px);
+  //background-color: #4c3b4d;
+  background-image: url("/assets/svgs/Waimakariri.svg");
+  scroll-snap-align: start;
+  padding: 10px;
+  box-shadow: inset 0 0 0 1000px ${({ theme }) => theme.skillsSectionImageBg};
+  background-attachment: fixed;
+  background-size: cover;
+  @media screen and (max-width: 780px) {
+    height: 190vh;
+  }
+`
+
+export const Section4 = styled.div`
   height: 100vh;
   background-color: #4c3b4d;
   scroll-snap-align: start;

@@ -16,6 +16,19 @@ export const lightTheme = {
   timelineTagWk: "#115173",
   carouselSecondaryContainerBg: "rgba(250, 241, 230, 1)",
   skillsSectionImageBg: "rgba(255, 238, 219, 0.6)",
+  containerBg: "#ffeedb",
+  shadow: "rgba(0, 0, 0, 0.3)",
+  accordionItemBg: `linear-gradient(
+    90deg,
+    #fae6f8,
+    #f1eaff,
+    #e6eeff,
+    #ddf3ff,
+    #d8f6ff80,
+    #d8f9f980,
+    #ddfaf180,
+    #e6faea80
+  )`,
 }
 
 export const darkTheme = {
@@ -36,4 +49,7 @@ export const darkTheme = {
   timelineTagWk: "#ED6663",
   carouselSecondaryContainerBg: "rgba(15, 4, 76, 1)",
   skillsSectionImageBg: "rgba(15, 4, 76, 0.6)",
+  containerBg: "#11324D", //"#09009B", //"#0F044C",
+  shadow: "rgba(255, 255, 255, 0.3)",
+  accordionItemBg: `linear-gradient(90deg, #191a19, #0e1d18, #00201e, #00232d, #00244080, #00235280, #001d5d80, #1c0c5b80)`, //`linear-gradient(90deg, #1e512890, #235c2c90, #29672f90, #2f723390, #367d3690, #3d883890, #45933b90, #4e9f3d90);`, //
 }
