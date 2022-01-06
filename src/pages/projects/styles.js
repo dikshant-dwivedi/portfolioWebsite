@@ -31,13 +31,13 @@ export const Section1 = styled.div`
 `
 
 export const Section2 = styled.div`
-  height: 100vh;
-  background-color: #61c9a8;
+  height: calc(100vh - 50px);
   scroll-snap-align: start;
-
-  @media screen and (max-width: 780px) {
-    height: calc(2 * (100vh - 51px));
-  }
+  padding: 10px;
+  background-image: url("/assets/images/projectListBg.jpg");
+  box-shadow: inset 0 0 0 1000px ${({ theme }) => theme.skillsSectionImageBg};
+  background-attachment: fixed;
+  background-size: cover;
 `
 
 export const Section3 = styled.div`

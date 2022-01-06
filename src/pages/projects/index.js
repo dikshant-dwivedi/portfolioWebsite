@@ -4,6 +4,7 @@ import { AnimatePresence } from "framer-motion"
 import { pageVariants, pageTransition } from "../../config/pageTransitions"
 import { Container, Section1, Section2, Section3 } from "./styles"
 import Carousel from "../../components/carousel/index"
+import ProjectListContainer from "../../containers/projectsListContainer"
 
 function Project() {
   const [loading, setLoading] = useState(true)
@@ -34,7 +35,9 @@ function Project() {
           <Section1>
             <Carousel />
           </Section1>
-          <Section2>sdadsadsadd</Section2>
+          <Section2>
+            <ProjectListContainer />
+          </Section2>
           <Section3>sddasdsadas</Section3>
         </>
       )}

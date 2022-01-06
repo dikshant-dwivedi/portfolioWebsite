@@ -338,6 +338,34 @@ export const AnimateIconInfo = styled(motion.div)`
   font-size: 1.3rem;
   display: inline-block;
   text-align: center;
+  position: relative;
+  cursor: pointer;
+
+  :hover {
+    ::after {
+      content: "copy";
+      padding: 5px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      border-radius: 5px;
+      background-color: ${({ theme }) => theme.txt};
+      color: ${({ theme }) => theme.bgBody};
+      position: absolute;
+      margin-left: 10px;
+      top: 3px;
+    }
+
+    ::before {
+      content: "";
+      padding: 5px;
+      background-color: ${({ theme }) => theme.txt};
+      color: ${({ theme }) => theme.bgBody};
+      position: absolute;
+      right: -15px;
+      top: 10px;
+      transform: rotate(45deg);
+    }
+  }
 `
 
 export const ContactInfoText = styled.p`

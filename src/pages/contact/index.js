@@ -109,6 +109,11 @@ function Contact() {
     sendEmail()
   }
 
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer")
+    if (newWindow) newWindow.opener = null
+  }
+
   return (
     <Container
       initial='initial'
@@ -145,6 +150,11 @@ function Contact() {
                       <AnimateIconInfo
                         whileTap={{ scale: 0.9 }}
                         whileHover={{ scale: 1.1 }}
+                        onClick={() => {
+                          navigator.clipboard.writeText("+918750748142")
+                        }}
+                        data-tip
+                        data-for='copyMobile'
                       >
                         <BsFillTelephoneFill />
                         <ContactInfoText>+91-8750748142</ContactInfoText>
@@ -154,6 +164,11 @@ function Contact() {
                       <AnimateIconInfo
                         whileTap={{ scale: 0.9 }}
                         whileHover={{ scale: 1.1 }}
+                        onClick={() => {
+                          navigator.clipboard.writeText(
+                            "Dikshantdwivedi055@gmail.com"
+                          )
+                        }}
                       >
                         <GrMail />
                         <ContactInfoText>
@@ -165,6 +180,9 @@ function Contact() {
                       <AnimateIconInfo
                         whileTap={{ scale: 0.9 }}
                         whileHover={{ scale: 1.1 }}
+                        onClick={() => {
+                          navigator.clipboard.writeText("Greater Noida, India")
+                        }}
                       >
                         <FaAddressCard />
                         <ContactInfoText>Greater Noida, India</ContactInfoText>
@@ -179,6 +197,9 @@ function Contact() {
                         <AnimateIconLink
                           whileTap={{ scale: 0.9 }}
                           whileHover={{ scale: 1.1 }}
+                          onClick={(e) =>
+                            openInNewTab("https://github.com/dikshant-dwivedi")
+                          }
                         >
                           <BsGithub />
                           <LinksText>Github Profile</LinksText>
@@ -188,6 +209,7 @@ function Contact() {
                         <AnimateIconLink
                           whileTap={{ scale: 0.9 }}
                           whileHover={{ scale: 1.1 }}
+                          onClick={(e) => openInNewTab("/assets/resume.pdf")}
                         >
                           <FaFilePdf />
                           <LinksText>Download Resume</LinksText>
@@ -199,6 +221,11 @@ function Contact() {
                         <AnimateIconLink
                           whileTap={{ scale: 0.9 }}
                           whileHover={{ scale: 1.1 }}
+                          onClick={(e) =>
+                            openInNewTab(
+                              "https://www.interviewbit.com/profile/dikshant-dwivedi"
+                            )
+                          }
                         >
                           <BsFillFileCodeFill />
                           <LinksText>Coding Profile</LinksText>
@@ -208,6 +235,11 @@ function Contact() {
                         <AnimateIconLink
                           whileTap={{ scale: 0.9 }}
                           whileHover={{ scale: 1.1 }}
+                          onClick={(e) =>
+                            openInNewTab(
+                              "https://www.linkedin.com/in/dikshant-dwivedi/"
+                            )
+                          }
                         >
                           <BsLinkedin />
                           <LinksText>Linkedin Profile</LinksText>

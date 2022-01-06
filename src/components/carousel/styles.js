@@ -103,6 +103,13 @@ export const TextContainerMobile = styled.div`
   @media (max-aspect-ratio: ${ar}) {
     display: block;
   }
+
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    display: none;
+  }
 `
 
 export const PrimaryImageContainer = styled(motion.div)`

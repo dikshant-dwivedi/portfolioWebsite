@@ -29,6 +29,17 @@ export const lightTheme = {
     #ddfaf180,
     #e6faea80
   )`,
+  cardBg1: "#ffefef",
+  cardBg2: "#f0e5cf",
+  cardBg3: "#cdf0ea",
+  cardBg4: "#fdd2bf",
+  cardTagBg1: "#781c68",
+  cardTagBg2: "#876445",
+  cardTagBg3: "#2f3a8f",
+  cardTagBg4: "#9b0000",
+  cardTagColor: "#fff",
+  cardBgSvg:
+    "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='500' height='450' preserveAspectRatio='none' viewBox='0 0 500 450'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1020%26quot%3b)' fill='none'%3e%3cpath d='M-9.2 85.55C67.86 101.64 88.25 252.9 219.94 301.55 351.63 350.2 282.18 493.13 334.51 529.65' stroke='rgba(0%2c 0%2c 0%2c 0.1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-83.41 240.43C-41.55 241.26-4.54 296.68 74.32 296.68 153.19 296.68 136.74 230.17 232.06 240.43 327.37 250.69 321.39 474.96 389.79 514.66' stroke='rgba(0%2c 0%2c 0%2c 0.1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-13.82 309.37C41.99 307.41 76.88 214.06 190.63 219.37 304.37 224.68 313.47 474.92 395.07 510.08' stroke='rgba(0%2c 0%2c 0%2c 0.1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-23.65 285.2C17.35 286.07 53.39 341.45 130.44 341.45 207.48 341.45 198.93 281.28 284.53 285.2 370.13 289.12 378.68 468.02 438.62 491.48' stroke='rgba(0%2c 0%2c 0%2c 0.1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-92.13 42.23C-30.25 50.02-31.44 155.98 108.35 190.73 248.14 225.48 231.23 426.2 308.83 456.01' stroke='rgba(0%2c 0%2c 0%2c 0.1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1020'%3e%3crect width='500' height='450' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e",
 }
 
 export const darkTheme = {
@@ -52,4 +63,15 @@ export const darkTheme = {
   containerBg: "#11324D", //"#09009B", //"#0F044C",
   shadow: "rgba(255, 255, 255, 0.3)",
   accordionItemBg: `linear-gradient(90deg, #191a19, #0e1d18, #00201e, #00232d, #00244080, #00235280, #001d5d80, #1c0c5b80)`, //`linear-gradient(90deg, #1e512890, #235c2c90, #29672f90, #2f723390, #367d3690, #3d883890, #45933b90, #4e9f3d90);`, //
+  cardBg1: "#064635",
+  cardBg2: "#3d0000",
+  cardBg3: "#150050",
+  cardBg4: "#781d42",
+  cardTagBg1: "#A6CF98",
+  cardTagBg2: "#E2C2B9",
+  cardTagBg3: "#B1D0E0",
+  cardTagBg4: "#FFAFAF",
+  cardTagColor: "#2C272E",
+  cardBgSvg:
+    "data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='500' height='450' preserveAspectRatio='none' viewBox='0 0 500 450'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1022%26quot%3b)' fill='none'%3e%3cpath d='M-9.2 85.55C67.86 101.64 88.25 252.9 219.94 301.55 351.63 350.2 282.18 493.13 334.51 529.65' stroke='rgba(255%2c 255%2c 255%2c 0.1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-83.41 240.43C-41.55 241.26-4.54 296.68 74.32 296.68 153.19 296.68 136.74 230.17 232.06 240.43 327.37 250.69 321.39 474.96 389.79 514.66' stroke='rgba(255%2c 255%2c 255%2c 0.1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-13.82 309.37C41.99 307.41 76.88 214.06 190.63 219.37 304.37 224.68 313.47 474.92 395.07 510.08' stroke='rgba(255%2c 255%2c 255%2c 0.1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-23.65 285.2C17.35 286.07 53.39 341.45 130.44 341.45 207.48 341.45 198.93 281.28 284.53 285.2 370.13 289.12 378.68 468.02 438.62 491.48' stroke='rgba(255%2c 255%2c 255%2c 0.1)' stroke-width='2'%3e%3c/path%3e%3cpath d='M-92.13 42.23C-30.25 50.02-31.44 155.98 108.35 190.73 248.14 225.48 231.23 426.2 308.83 456.01' stroke='rgba(255%2c 255%2c 255%2c 0.1)' stroke-width='2'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1022'%3e%3crect width='500' height='450' fill='white'%3e%3c/rect%3e%3c/mask%3e%3c/defs%3e%3c/svg%3e",
 }
