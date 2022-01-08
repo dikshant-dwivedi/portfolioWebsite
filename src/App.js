@@ -22,7 +22,7 @@ function App() {
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
       <GlobalStyle />
       <Navbar toggleTheme={toggleTheme} theme={theme} />
-      <Particles params={configDark} />
+      {/*<Particles params={configDark} />*/}
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
           <Route path={ROUTES.HOME} element={<Home />} />
