@@ -13,7 +13,7 @@ export const Container = styled(motion.div)`
   ::-webkit-scrollbar {
     display: none;
   }
-  scroll-snap-type: y mandatory;
+
   position: relative;
 `
 
@@ -21,7 +21,6 @@ export const Section1 = styled(motion.div)`
   min-height: calc(100vh - 50px);
   width: 100%;
   background-image: ${({ theme }) => theme.contactFormBg};
-  scroll-snap-align: start;
 
   @media screen and (max-width: 954px) {
     height: 150vh;
