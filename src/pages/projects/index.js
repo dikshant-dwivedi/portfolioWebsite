@@ -2,7 +2,15 @@ import React, { useEffect, useState } from "react"
 import { Loader } from "./../../components/loader/index"
 import { AnimatePresence } from "framer-motion"
 import { pageVariants, pageTransition } from "../../config/pageTransitions"
-import { Container, Section1, Section2 } from "./styles"
+import {
+  Container,
+  Section1,
+  Section2,
+  Heading,
+  SubHeading,
+  Header,
+  SectionTitle,
+} from "./styles"
 import Carousel from "../../components/carousel/index"
 import ProjectListContainer from "../../containers/projectsListContainer"
 
@@ -33,6 +41,16 @@ function Project() {
       {startRendering && (
         <>
           <Section1>
+            <Header>
+              <Heading>Projects</Heading>
+              <SubHeading>
+                The projects I completed during my B. Tech. degree are evidence
+                of my experience. It demonstrates my skill set, my eagerness to
+                broaden my horizons and think beyond the obvious, and, most
+                importantly, my potential to be better than I am now.
+              </SubHeading>
+              <SectionTitle>Featured Projects</SectionTitle>
+            </Header>
             <Carousel />
           </Section1>
           <Section2>

@@ -5,7 +5,10 @@ const ar = "13/10"
 
 export const MobileContainer = styled.div`
   vertical-align: middle;
-  max-width: 100%;
+  max-width: 70%;
+  min-width: 807px;
+  margin: auto;
+
   height: auto;
   box-shadow: inset 0 0 0 1000px ${({ theme }) => theme.contactFormImgBg};
   padding: ;
@@ -13,6 +16,11 @@ export const MobileContainer = styled.div`
   @media (max-aspect-ratio: ${ar}) {
     border-bottom-right-radius: 20px;
     border-bottom-left-radius: 20px;
+  }
+
+  @media screen and (max-width: 890px) {
+    max-width: 100%;
+    min-width: unset;
   }
 `
 
@@ -222,7 +230,7 @@ export const SecondaryImageContainer = styled(motion.div)`
     top: 0;
     left: 0;
     font-weight: bold;
-    font-size: 2vw;
+    font-size: 1.5vw;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -247,6 +255,10 @@ export const SecondaryImageContainer = styled(motion.div)`
 
     :first-child {
       padding-left: 5px;
+    }
+
+    ::after {
+      font-size: 2vw;
     }
   }
 `

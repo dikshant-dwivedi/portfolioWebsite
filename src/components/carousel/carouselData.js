@@ -6,55 +6,63 @@ export const carouselData = [
     title: "Netflix Clone",
     imageUrl: imgPath + "netflix.PNG",
     description:
-      "If you’re confused about how to write your meta descriptions, you’re not the only one. To help remove that confusion, I’m going to dig into what makes a great meta description and share 15 killer meta description examples.",
+      "Based on Karl Hadwen's tutorial titled, Netflix Clone - React Tutorial - Styled Components - Firebase (Firestore & Auth), this project is a watered down clone of the popular streaming service - Netflix.",
+    srcUrl: "https://github.com/dikshant-dwivedi/netflixClone",
   },
   {
     id: "71677c",
     title: "Proshop",
     imageUrl: imgPath + "proShop.PNG",
     description:
-      "A meta description is an HTML element that contains a short summary of your page and generates the brief snippet you see underneath a site’s title in Google’s organic search results. Here’s an example of what it usually looks like",
+      "Based on Brad Traversy's course, ProShop allows authenticated users to order products, pay using PayPal api and view their order status. Additionally, it boasts an operable admin panel to modify products and users.",
+    srcUrl: "https://github.com/dikshant-dwivedi/proShop",
   },
   {
     id: "dda77b",
     title: "Waddle",
     imageUrl: imgPath + "waddle.jpg",
     description:
-      "Pro tip; If you’re looking for a tool to help you analyze your site’s level of SEO optimization and how it’s seen by the search engines, check out SEMrush. It’s one of the leading tools in this space",
+      "Waddle takes the Pomodoro technique to the next level by introducing room collaboration and shared Pomodoro sessions with a smart timer. It comes with a responsive to-do list and a fully admin moderated chatbox.",
+    srcUrl: "https://github.com/dikshant-dwivedi/waddle",
   },
   {
     id: "e55934",
-    title: "Sample Project 4",
-    imageUrl: imgPath + "sampleImage.jpg",
-    description:
-      "When Google increased the length of search descriptions to 320 characters back in December 2017, SEOs got a little too excited and started re-writing meta descriptions for their sites. So it’s no surprise many started freaking out in May 2018 when Google unexpectedly dropped the length back to 160 characters.",
+    title: "Stock Prediction",
+    description: `An attempt to predict the direction of the close and mid-price of a stock using 2D-CNNs by converting a 1-D time series regression problem into a 2-D image classification problem.`,
+    imageUrl: imgPath + "stockPrediction.PNG",
+    srcUrl: "https://github.com/dikshant-dwivedi/stockPriceDirectionPrediction",
   },
   {
     id: "cdaca1",
-    title: "Sample Project 5",
-    imageUrl: imgPath + "sampleImage.jpg",
+    title: "Merge Sort Algorithm Modification",
     description:
-      "The fact is, Google has never explicitly stated how long meta descriptions should be, even when they’ve made sweeping changes to search pages. In fact, Google’s public liaison of search, Danny Sullivan, advised against rewriting descriptions.",
+      "Tweaked merge sort algorithm by adding min-max and insertion sort for smaller inputs.",
+    imageUrl: imgPath + "minorMod.PNG",
+    srcUrl:
+      "https://github.com/dikshant-dwivedi/mergeSortModificationAlgorithm",
   },
   {
     id: "ccfbfe",
-    title: "Sample Project 6",
-    imageUrl: imgPath + "sampleImage.jpg",
+    title: "Netflix Clone",
+    imageUrl: imgPath + "netflix.PNG",
     description:
-      "May’s drop back to 160 characters prompted a flood of frustration on Twitter from people who just want clear guidelines from Google around how long to write meta descriptions. But as Sullivan pointed out, the search giant doesn’t want people to focus on character count – they want site owners to focus on delivering what works for visitors.",
+      "Based on Karl Hadwen's tutorial titled, Netflix Clone - React Tutorial - Styled Components - Firebase (Firestore & Auth), this project is a watered down clone of the popular streaming service - Netflix.",
+    srcUrl: "https://github.com/dikshant-dwivedi/netflixClone",
   },
   {
     id: "1f0812",
-    title: "Sample Project 7",
-    imageUrl: imgPath + "sampleImage.jpg",
+    title: "Proshop",
+    imageUrl: imgPath + "proShop.PNG",
     description:
-      "In other words, Google wants authentic, quality content in search. You don’t need to read between the lines to understand that Google wants people to focus on improving the quality of their content instead of tweaking meta description examples to lure visitors to their sites.",
+      "Based on Brad Traversy's course, ProShop allows authenticated users to order products, pay using PayPal api and view their order status. Additionally, it boasts an operable admin panel to modify products and users.",
+    srcUrl: "https://github.com/dikshant-dwivedi/proShop",
   },
   {
     id: "b98b82",
-    title: "Sample Project 8",
-    imageUrl: imgPath + "sampleImage.jpg",
+    title: "Waddle",
+    imageUrl: imgPath + "waddle.jpg",
     description:
-      "It’s important to know that Google won’t always display your descriptions as intended. In fact, according to a Moz analysis[2], only 35.9% of original meta description tags are displayed “as is” in Google search.",
+      "Waddle takes the Pomodoro technique to the next level by introducing room collaboration and shared Pomodoro sessions with a smart timer. It comes with a responsive to-do list and a fully admin moderated chatbox.",
+    srcUrl: "https://github.com/dikshant-dwivedi/waddle",
   },
 ]

@@ -22,7 +22,9 @@ export const Heading = styled.h1`
   margin: 0;
   padding: 20px;
   text-align: center;
-  background-image: ${({ theme }) => theme.blogHeadingBg};
+  background-image: url("/assets/images/treeBg.jpg");
+  box-shadow: inset 0 0 0 1000px ${({ theme }) => theme.skillsSectionImageBg};
+  background-attachment: fixed;
   background-position: center;
   font-size: 2.8rem;
   span {

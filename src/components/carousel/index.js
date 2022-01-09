@@ -43,6 +43,11 @@ const Carousel = () => {
     setProducts(newProducts)
   }
 
+  const openInNewTab = (url) => {
+    const newWindow = window.open(url, "_blank", "noopener,noreferrer")
+    if (newWindow) newWindow.opener = null
+  }
+
   return (
     <MobileContainer>
       <Container>
@@ -58,6 +63,9 @@ const Carousel = () => {
                   src={primaryProduct.imageUrl}
                   alt={primaryProduct.title}
                   showShadow={true}
+                  onClick={(e) => {
+                    openInNewTab(primaryProduct.srcUrl)
+                  }}
                 />
                 <TextContainerDesktop>
                   <ProjectHeading>{primaryProduct.title}</ProjectHeading>

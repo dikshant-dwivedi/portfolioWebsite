@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { motion } from "framer-motion"
-import layerSvg from "./layer1.svg"
 
 export const Container = styled(motion.div)`
   width: 95%;
@@ -23,12 +22,12 @@ export const Container = styled(motion.div)`
 
 export const Section1 = styled.div`
   height: calc(100vh - 50px);
-  background-color: #a53860;
   scroll-snap-align: start;
 
-  @media screen and (max-width: 780px) {
-    height: calc(2 * (100vh - 51px));
-  }
+  background-image: url("/assets/images/homePageBg.jpg");
+  box-shadow: inset 0 0 0 1000px ${({ theme }) => theme.skillsSectionImageBg};
+  background-position: center;
+  background-attachment: fixed;
 
   display: flex;
 `
@@ -46,8 +45,9 @@ export const HeadingWrapper = styled.div`
   height: 100%;
   font-weight: 500;
   color: ${({ theme }) => theme.txt};
-  padding-left: 50px;
+  //padding-left: 50px;
   display: flex;
+  text-align: center;
   flex-direction: column;
   justify-content: center;
   position: relative;
@@ -65,7 +65,7 @@ export const HeadingTertiary = styled.h3`
   margin: 0px;
 
   span {
-    color: yellow;
+    color: ${({ theme }) => theme.homePageHeading};
   }
 
   .ityped-cursor {
@@ -145,53 +145,4 @@ export const Section4 = styled.div`
   @media screen and (max-width: 780px) {
     height: calc(2 * (100vh - 51px));
   }
-`
-export const ShapeDivider1 = styled.div`
-  position: absolute;
-  top: -1px;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-  transform: rotate(180deg);
-
-  svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: calc(40vh);
-  }
-
-  .shape-fill {
-    fill: #61c9a8;
-  }
-`
-export const ShapeDivider2 = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  overflow: hidden;
-  line-height: 0;
-
-  svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: calc(40vh);
-  }
-
-  .shape-fill {
-    fill: #61c9a8;
-  }
-`
-export const ShapeDivider3 = styled.div`
-  //aspect-ratio: 900/600;
-  //width: 100%;
-  width: 100%;
-  height: 400px;
-  background-image: ${layerSvg};
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 `

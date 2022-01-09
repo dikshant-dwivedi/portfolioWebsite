@@ -8,8 +8,8 @@ import {
   Container,
   Section1,
   Section2,
-  Section3,
-  LeftContainer,
+  /*Section3,
+  LeftContainer,*/
   RightContainer,
   HeadingWrapper,
   HeadingMain,
@@ -18,7 +18,7 @@ import {
   DownArrow,
 } from "./styles"
 import SkillsContainer from "../../containers/skillsContainer"
-import AccordionContainer from "../../containers/accordionContainer"
+//import AccordionContainer from "../../containers/accordionContainer"
 
 function Home() {
   const textRef = useRef()
@@ -54,13 +54,13 @@ function Home() {
       {startRendering && (
         <>
           <Section1 id='section1'>
-            <LeftContainer></LeftContainer>
+            {/*<LeftContainer></LeftContainer>*/}
             <RightContainer>
               <HeadingWrapper>
                 <HeadingSecondary>Hi There, I'm</HeadingSecondary>
                 <HeadingMain>Dikshant Dwivedi</HeadingMain>
                 <HeadingTertiary>
-                  freelance <span ref={textRef}></span>
+                  <span ref={textRef}></span>
                 </HeadingTertiary>
                 <DownArrow>
                   <a href='#section2'>
@@ -73,9 +73,9 @@ function Home() {
           <Section2 id='section2'>
             <SkillsContainer />
           </Section2>
-          <Section3 id='section3'>
+          {/*<Section3 id='section3'>
             <AccordionContainer />
-          </Section3>
+      </Section3>*/}
         </>
       )}
     </Container>
