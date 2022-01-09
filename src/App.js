@@ -7,8 +7,8 @@ import { lightTheme, darkTheme } from "./constants/themes"
 import GlobalStyle from "./global-styles"
 import { useState } from "react"
 import { AnimatePresence } from "framer-motion"
-import Particles from "react-tsparticles"
-import { configDark } from "./config/particleJsBg"
+//import Particles from "react-tsparticles"
+//import { configDark } from "./config/particleJsBg"
 
 function App() {
   const [theme, setTheme] = useState("light")

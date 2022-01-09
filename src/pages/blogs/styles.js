@@ -5,7 +5,6 @@ import Tilt from "react-parallax-tilt"
 export const Container = styled(motion.div)`
   width: 95%;
   margin: auto;
-  position: relative;
   background-color: #ffeedb;
   height: calc(100vh - 51px);
   overflow-y: scroll;
@@ -15,6 +14,19 @@ export const Container = styled(motion.div)`
 
   ::-webkit-scrollbar {
     display: none;
+  }
+`
+
+export const Heading = styled.h1`
+  padding: 0;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  background-image: ${({ theme }) => theme.blogHeadingBg};
+  background-position: center;
+  font-size: 2.8rem;
+  span {
+    font-size: 4rem;
   }
 `
 
@@ -237,8 +249,8 @@ export const Card = styled(Tilt)`
   }
 
   @media screen and (min-width: 601px) and (max-width: 800px) {
-    width: 90%;
-    height: 90%;
+    width: 95%;
+    height: 95%;
     grid-template-columns: 2fr 3fr;
     grid-template-rows: 4fr 2fr 1fr;
     grid-template-areas:
