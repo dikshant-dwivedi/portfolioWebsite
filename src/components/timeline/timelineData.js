@@ -1,5 +1,26 @@
 export const timelineData = [
   {
+    title: "Triomics - Front Software Development Engineer intern, Remote",
+    duration: "30th May, 2022 - Ongoing",
+    description: {
+      type: "list",
+      text: [
+        "Tech: React, typescript, styled-components, Material UI",
+        "Developed clean, modular, reusable and responsive UI components with high attention to the guidelines",
+        "Collaborated with backend developers to implement fast and secure front-end architecture",
+        "Worked closely with UI/UX designers to review and design interfaces to provide the best user experience.",
+      ],
+    },
+    category: {
+      tag: "Work Experience",
+      color: 0,
+    },
+    link: {
+      text: "Website can be visited from here",
+      url: "https://triomics.in/",
+    },
+  },
+  {
     title: "GoodLives - Full stack developer intern, Remote",
     duration: "2nd August, 2021 - 7th October, 2021",
     description: {
@@ -27,8 +48,8 @@ export const timelineData = [
       type: "list",
       text: [
         "Stream: Computer Science Engineering",
-        "Currently in Sixth Semester",
-        "CGPA on a scale of 10: 8.92",
+        "Currently in seventh semester",
+        "CGPA on a scale of 10: 8.9",
       ],
     },
     category: {
