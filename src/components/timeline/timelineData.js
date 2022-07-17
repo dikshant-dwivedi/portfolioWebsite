@@ -1,6 +1,6 @@
 export const timelineData = [
   {
-    title: "Triomics - Front Software Development Engineer intern, Remote",
+    title: "Triomics - Frontend Software Development Engineer intern, Remote",
     duration: "30th May, 2022 - Ongoing",
     description: {
       type: "list",
