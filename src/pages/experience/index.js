@@ -40,18 +40,6 @@ function Experience() {
           </Section2>
         </>
       )}
-      {/*loading ? (
-          <Loader key='loader' />
-        ) : (
-          <>
-            <Section1>
-              <Timeline />
-            </Section1>
-            <Section2>
-              <ImageSlider />
-            </Section2>
-          </>
-        )*/}
     </Container>
   )
 }
