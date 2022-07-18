@@ -316,7 +316,15 @@ export const Image = styled.div`
 export const Title = styled.h2`
   margin: 0;
   padding: 0;
-  color: ${({ theme }) => theme.timelineItemTxt};
+
+  a{
+    color: ${({ theme }) => theme.timelineItemTxt};
+    text-decoration: none;
+
+    :hover{
+      text-decoration: underline;
+    }
+  }
 
   @media screen and (max-width: 800px) {
     font-size: 1.4rem;
